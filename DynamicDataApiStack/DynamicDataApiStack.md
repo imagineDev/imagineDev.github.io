@@ -25,14 +25,15 @@ And the API will simply return the KeyName and its KeyValue.
 Description should not be returned. It is just for the dashboard.
 
 ##### Here is an example of what Firebase's Remote Config Dashboard looks like:
-![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/Screenshot-Firebase-RemoteConfig.png?raw=true)
+![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/DynamicDataApiStack/assets/Screenshot-Firebase-RemoteConfig.png?raw=true)
+
 
 ##### Here is a more complex example of Firebase's Remote Config where we are passing json as the value:
-![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/Screenshot-Firebase-RemoteConfig-json.png?raw=true)
+![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/DynamicDataApiStack/assets/Screenshot-Firebase-RemoteConfig-json.png?raw=true)
 
 
 ##### Here is an example of Firebase's Remote Config Dashboard demonstrating grouping of parameters
-![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/Screenshot-Firebase-RemoteConfig-Groups.png?raw=true)
+![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/DynamicDataApiStack/assets/Screenshot-Firebase-RemoteConfig-Groups.png?raw=true)
 
 
 ## 2.  User Settings
@@ -98,6 +99,10 @@ When this API has discrepancy, refresh the User Settings API.
 
 
 ## Togather in Action
+
+
+![Togather in Action](https://github.com/imagineDev/imagineDev.github.io/blob/master/DynamicDataApiStack/assets/Flow-Diag-1.png?raw=true)
+##### Flow Diagram
 
 Step 1. It indicates fetching of Remote Configuration Data on App Start and storing it on local storage. As this data will be cached, a time threshold can also be added. Say Fire the API on every app start if last data was fetched (Say THRESHOLD = 15 mins) earlier.
 > As it is a network call and it can take some time or even fail, this configuration data will always be backed by a default data that will be stored on the device itself.
