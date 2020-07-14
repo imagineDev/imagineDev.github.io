@@ -104,24 +104,25 @@ When this API has discrepancy, refresh the User Settings API.
 ##### Flow Diagram
 ![Togather in Action](https://github.com/imagineDev/imagineDev.github.io/blob/master/DynamicDataApiStack/assets/Flow-Diag-1.png?raw=true)
 
+</br>
 ##### Explanation
 
-Step 1. It indicates fetching of Remote Configuration Data on App Start and storing it on local storage. As this data will be cached, a time threshold can also be added. Say Fire the API on every app start if last data was fetched (Say THRESHOLD = 15 mins) earlier.
+<u><b>Step 1.</b></u> It indicates fetching of Remote Configuration Data on App Start and storing it on local storage. As this data will be cached, a time threshold can also be added. Say Fire the API on every app start if last data was fetched (Say THRESHOLD = 15 mins) earlier.
 > As it is a network call and it can take some time or even fail, this configuration data will always be backed by a default data that will be stored on the device itself.
 &nbsp;
 <b>Note: This will be configured from the Remote Config Web Portal</b>
 
-Step 2. It indicates fetching of User Settings Data. There may be certain events when this API will be triggered, one being App Start.
+<u><b>Step 2.</b></u> It indicates fetching of User Settings Data. There may be certain events when this API will be triggered, one being App Start.
 > When we say Data Syncing, it depends on how tight syncing we are expecting. Some Apps prefer tight syncing in which a session is maintained and data is immediately synced to and fro the server. Some Apps prefer light syncing in which on certain events the data is synced. Like App Start, Time Interval, Triggered on a push command (Push Notification - Data Message for command purpose only.).. 
 Using a realtime database can be considered here.
 
 
-Step 3. It indicates fetching of Map Configuration Data. Configuration data basically control the Map Layers section of Move App. It will dynamically provide the Map Layers, Report Data, etc.
+<u><b>Step 3.</b></u> It indicates fetching of Map Configuration Data. Configuration data basically control the Map Layers section of Move App. It will dynamically provide the Map Layers, Report Data, etc.
 Product can even ask to fetch the data on basis of some paramteres like User's Current Location. Say: Show "Street Map" layer to only those in Banglore Area.
 &nbsp;
 <b>Note: This will be configured from the a Config Web Portal, where the actor (Product Owner) can control what specific data to show.</b>
 
-Step 4. It indicates that the Map Styles or Layer that we have to apply or operate on must be synced with the 'Map Style Cloud'. <b>ie. The Configuration API should only return those styles that are deployed on the Map Style Cloud and are supported by the Map SDK.
+<u><b>Step 4.</b></u> It indicates that the Map Styles or Layer that we have to apply or operate on must be synced with the 'Map Style Cloud'. <b>ie. The Configuration API should only return those styles that are deployed on the Map Style Cloud and are supported by the Map SDK.
 Also Map SDK should always keep the options OPEN to apply style and operate on Map Layers and other Geometry objects by Move App</b>
 
 </br></br></br>
