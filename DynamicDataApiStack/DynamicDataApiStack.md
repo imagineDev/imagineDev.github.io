@@ -7,9 +7,9 @@
 <br><br>
 
 
-### Introduction
+## Introduction
 
-##### About Mobile Applications
+#### About Mobile Applications
 
 Before we first jump on the API and requirement, I would like to first state that Mobile Development is very different than a Web Development. Whereas a Web Page waits for the Dynamic Page from the server to load on the client machine, mobile app draws the UI first and waits for the content to be loaded in its respective containers.
 That is why whenever you open any application like Zomato, Swiggy, Spotify, etc You first see the branding, its UI components, and a container with a loader waiting to fetch the data and populate there.
@@ -28,6 +28,12 @@ Another important point worth mentioning is that Mobile Platforms like Android r
 In order to be quick and responsive, Android applications plays a major role in rendering the data and handling of data (models like storing the data and syncing with the server) to also parsing and conversion of data. 
 Do note that more the processing of a Application, more will be its battery consumption and this plays a significant role in Background processing.
 <b>By this we can conclude that data filteration for the APIs should be avoided at Mobile end.</b>
+
+#### Requirement
+An Eagle-View of the requirement would be:
+- To make our APIs so smart that based on the factors like User, Attributes of a User, Geography, preferences that are set by the Product Owner, etc -- The APIs would curate the data accordingly.
+- The APIs are expected to provide data according to the UI. API may have to provide data by combining results from multiple tables, data sources and even filtering them if required. The Base structure and contracts of the API modules should be consistent throughtout. <i>Checkout Public APIs for few top grossing applications like Zomato, Google, Sygic, etc.</i>
+
 
 <br>
 
@@ -49,8 +55,6 @@ The dashboard will have provision to input following from the user:
 
 And the API will simply return the KeyName and its KeyValue.
 Description should not be returned. It is just for the dashboard.
-
-<br>
 
 #### About this API:
 This is similar to the Firebase's Remote Config feature, and we may except it to be even better than that.
@@ -91,6 +95,8 @@ Each Key may be bind to a UI Widget Property, we will query the Key and apply it
 ##### Here is an example of Firebase's Remote Config Dashboard demonstrating condition based values of the parameters
 ![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/DynamicDataApiStack/assets/Screenshot-Firebase-RemoteConfig-Conditions.png?raw=true)
 
+<br> <br>
+
 
 ## 2.  User Settings
 This module contains:
@@ -104,13 +110,15 @@ Subsequently a get call will be made to fetch all the settings.
 
 > As a user can be on any platform like Andorid, iOS and Web hence platform identifier will NOT be present. These settings would be shared by all the platforms.
 
-<br>
 
 #### About this API:
 This API would be only used to store Users configuration. Developers/ Product Owners are the best judge of what values to store and how to store them and hence will only be modified by them.
 The Key and its value should be decided by the developers/ product owners and do not need any other team to control or modify the data.
 
 > ⚠️ This APIs schema and control flow is yet to be finalised. But the bigger picture is provided here.
+
+<br> <br>
+
 
 ## 3.  Custom Dedicated API for a feature/ UI Component:
 ### Map Configurations:
@@ -172,7 +180,7 @@ This module contains:
 This API only serves the purpose of giving the configuration data of Map Objects and Map Layers.
 When this API has discrepancy, refresh the User Settings API.
 
-</br>
+</br> <br>
 
 ## Togather in Action
 
