@@ -33,6 +33,12 @@ Do note that more the processing of a Application, more will be its battery cons
 An Eagle-View of the requirement would be:
 - To make our APIs so smart that based on the factors like User, Attributes of a User, Geography, preferences that are set by the Product Owner, etc -- The APIs would curate the data accordingly.
 - The APIs are expected to provide data according to the UI. API may have to provide data by combining results from multiple tables, data sources and even filtering them if required. The Base structure and contracts of the API modules should be consistent throughtout. <i>Checkout Public APIs for few top grossing applications like Zomato, Google, Sygic, etc.</i>
+- The APIs should be Dynamic. The Terms Dynamic is used at multiple places in these documents and it means that given a <b>fixed contract/ schema</b> the data of the API can easily be controlled (toggled on/off, etc) by the Admin <b>wherever required</b>.
+
+In this Dynamic APIs Stack, we are talking about 3 things:
+A Remote Config API which is similar to what we do with Firebase's Remote Config feature, 
+An API to store and get the User's settings so that it can be syned on multiple platforms,
+And how we will want all our feature dedicated APIs (like Reports, Map Layers, Place Details). Here we have given example of Map Configuration API.
 
 
 <br>
@@ -89,10 +95,10 @@ Each Key may be bind to a UI Widget Property, we will query the Key and apply it
 ![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/DynamicDataApiStack/assets/Screenshot-Firebase-RemoteConfig-json.png?raw=true)
 
 
-##### Here is an example of Firebase's Remote Config Dashboard demonstrating grouping of parameters
+##### Here is an example of Firebase's Remote Config Dashboard demonstrating grouping of parameters:
 ![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/DynamicDataApiStack/assets/Screenshot-Firebase-RemoteConfig-Groups.png?raw=true)
 
-##### Here is an example of Firebase's Remote Config Dashboard demonstrating condition based values of the parameters
+##### Here is an example of Firebase's Remote Config Dashboard demonstrating condition based values of the parameters:
 ![Firebase Remote Config](https://github.com/imagineDev/imagineDev.github.io/blob/master/DynamicDataApiStack/assets/Screenshot-Firebase-RemoteConfig-Conditions.png?raw=true)
 
 <br> <br>
@@ -115,7 +121,7 @@ Subsequently a get call will be made to fetch all the settings.
 This API would be only used to store Users configuration. Developers/ Product Owners are the best judge of what values to store and how to store them and hence will only be modified by them.
 The Key and its value should be decided by the developers/ product owners and do not need any other team to control or modify the data.
 
-> ⚠️ This APIs schema and control flow is yet to be finalised. But the bigger picture is provided here.
+> ⚠️ This APIs schema and control flow is yet to be finalized. But the bigger picture is provided here.
 
 <br> <br>
 
@@ -128,6 +134,7 @@ This module contains:
  1. API to get the configurations
  
  Here is an sample json just as an example
+ > ⚠️ This APIs schema and control flow is yet to be finalized. But the bigger picture is provided here.
 ```json
     {
   "layers": [
@@ -176,6 +183,7 @@ This module contains:
   ]
 }
 ```
+> ⚠️ This APIs schema and control flow is yet to be finalized. But the bigger picture is provided here.
 
 This API only serves the purpose of giving the configuration data of Map Objects and Map Layers.
 When this API has discrepancy, refresh the User Settings API.
