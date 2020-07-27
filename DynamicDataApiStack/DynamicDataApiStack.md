@@ -41,12 +41,13 @@ An Eagle-View of the requirement would be:
 - [Microservices design patterns for CTOs: API Gateway, Backend for Frontend and more](https://tsh.io/blog/design-patterns-in-microservices-api-gateway-bff-and-more/)
 - [Backend-For-Frontend using GraphQL under Microservices](https://medium.com/tech-tajawal/backend-for-frontend-using-graphql-under-microservices-5b63bbfcd7d9)
 
+<p>
 In this Dynamic APIs Stack, we are talking about 3 things:
 A Remote Config API which is similar to what we do with Firebase's Remote Config feature, 
 An API to store and get the User's settings so that it can be syned on multiple platforms,
 And how we will want all our feature dedicated APIs (like Reports, Map Layers, Place Details). Here we have given example of Map Configuration API.
 Below we have further discussed each API in detail.
-
+</p>
 <br>
 
 ## 1.  Remote Config
