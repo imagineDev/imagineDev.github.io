@@ -35,11 +35,17 @@ An Eagle-View of the requirement would be:
 - The APIs are expected to provide data according to the UI. API may have to provide data by combining results from multiple tables, data sources and even filtering them if required. The Base structure and contracts of the API modules should be consistent throughtout. <i>Checkout Public APIs for few top grossing applications like Zomato, Google, Sygic, etc.</i>
 - The APIs should be Dynamic. The Terms Dynamic is used at multiple places in these documents and it means that given a <b>fixed contract/ schema</b> the data of the API can easily be controlled (toggled on/off, etc) by the Admin <b>wherever required</b>.
 
+<b>Read more about scaling Mobile App Development and patterns like Backend for Frontends:</b>
+- [Scaling Move Development by Eyle on Medium](https://medium.com/better-programming/scaling-mobile-development-365cab84781e)
+- [Backend For Frontend (BFF) Pattern by Jose Maria Elias](https://medium.com/zinklar-tech/backend-for-frontend-bff-pattern-5e8810779d9f)
+- [Microservices design patterns for CTOs: API Gateway, Backend for Frontend and more](https://tsh.io/blog/design-patterns-in-microservices-api-gateway-bff-and-more/)
+- [Backend-For-Frontend using GraphQL under Microservices](https://medium.com/tech-tajawal/backend-for-frontend-using-graphql-under-microservices-5b63bbfcd7d9)
+
 In this Dynamic APIs Stack, we are talking about 3 things:
 A Remote Config API which is similar to what we do with Firebase's Remote Config feature, 
 An API to store and get the User's settings so that it can be syned on multiple platforms,
 And how we will want all our feature dedicated APIs (like Reports, Map Layers, Place Details). Here we have given example of Map Configuration API.
-
+Below we have further discussed each API in detail.
 
 <br>
 
